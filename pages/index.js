@@ -1,8 +1,13 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
+import Main from '../components/Main'
+import About from '../components/About'
+import Script from 'next/script'
+import Particle from "../components/Particle";
 
 
 export default function Home() {
+
   return (
     <div>
       <Head>
@@ -10,8 +15,14 @@ export default function Home() {
         <meta name="description" content="Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script type="module" id='ball' src='./rotating-ball.js'>
+      </Script>
       <main>
         <Navbar />
+        <div className='maincontainer'>
+          <Main  className='' />
+          <About />
+        </div>
       </main>
     </div>
   )

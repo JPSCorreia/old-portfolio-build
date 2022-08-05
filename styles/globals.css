@@ -27,8 +27,53 @@
   button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#9ddb64] to-[#30aa50]
   }
+/* 
+  * {
+    @apply border border-red-500
+  } */
 
 }
 
+#tsparticles {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  z-index: -1; /* if you use -1 you have to set to `"window"` the interactivity.detectsOn property */
+}
 
+.mainbody {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 
+.maincontainer {
+  position: relative;
+}
+
+* {
+  z-index: 10;
+  /* border: 1px solid red; */
+}
+
+.ball {
+  position: fixed;
+  top: 8px;
+  left: -16px;
+  /* padding: 5px; */
+  z-index:999
+}
+
+.sidebar {
+  padding-top: 1px;
+  padding-left: 8px;
+}
+
+.sidebar-border {
+  padding-top: 2px;
+}
