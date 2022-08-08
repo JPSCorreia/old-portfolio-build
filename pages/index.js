@@ -4,6 +4,8 @@ import Main from '../components/Main'
 import About from '../components/About'
 import Script from 'next/script'
 import Particle from "../components/Particle";
+import Skills from '../components/Skills'
+import Projects from '../components/Projects'
 
 
 export default function Home() {
@@ -22,6 +24,8 @@ export default function Home() {
         <div className='maincontainer'>
           <Main  className='' />
           <About />
+          <Skills />
+          <Projects />
         </div>
       </main>
     </div>

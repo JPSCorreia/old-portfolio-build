@@ -27,19 +27,19 @@ function Navbar() {
         <div>
           <ul className='hidden lg:flex uppercase mr-20'>
             <Link href='/'>
-              <li className='hover:shadow-custom pl-6 pr-6 mt-2 ml-2 text-center p-3 text-xl hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Home</li>
+              <li className='hover:shadow-custom pl-6 pr-6 ml-2 text-center p-3 text-xl hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Home</li>
             </Link>
             <Link href='/'>
-              <li className='hover:shadow-custom pl-6 pr-6 mt-2 ml-2  p-3 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100 '>About</li>
+              <li className='hover:shadow-custom pl-6 pr-6 ml-2  p-3 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100 '>About</li>
             </Link>
             <Link href='/'>
-              <li className='hover:shadow-custom pl-6 pr-6 mt-2 ml-2  p-3 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Skills</li>
+              <li className='hover:shadow-custom pl-6 pr-6 ml-2  p-3 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Skills</li>
             </Link>
             <Link href='/'>
-              <li className='hover:shadow-custom pl-6 pr-6 mt-2 ml-2  p-3 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Project</li>
+              <li className='hover:shadow-custom pl-6 pr-6 ml-2  p-3 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Project</li>
             </Link>
             <Link href='/'>
-              <li className='hover:shadow-custom pl-6 pr-6 mt-2 p-3 ml-2  text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Contact</li>
+              <li className='hover:shadow-custom pl-6 pr-6 p-3 ml-2  text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Contact</li>
             </Link>
           </ul>
           <div onClick={handleNav} className='lg:hidden rounded-full mr-24 cursor-pointer p-2 hover:shadow-sm hover:shadow-[#9ddb64] hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
@@ -51,7 +51,7 @@ function Navbar() {
         <div 
           className={ 
             nav
-            ? 'shadow-sm shadow-[#9ddb64] fixed h-screen left-0 top-0 sidebar sm:w-[60%] md:w-[60%] lg:w-[60%] bg-[#121212] pr-3 pb-4 pl-3 ease-in duration-200 ' 
+            ? 'shadow-sm shadow-[#9ddb64] fixed h-screen left-0 top-0 sidebar sm:w-[70%] md:w-[60%] lg:w-[60%] bg-[#121212] pr-4 pb-4 pl-3 ease-in duration-200 ' 
             : 'shadow-sm shadow-[#9ddb64] fixed h-screen left-[-120%] top-0 sidebar pr-4 pb-4 pl-4 ease-in duration-200'
           }
         >
@@ -73,19 +73,19 @@ function Navbar() {
             <div className=''>
               <ul className='flex flex-col uppercase justify-center align-center my-10'>
                 <Link href='/'>
-                <li className='hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 text-center py-2 my-2 text-xl hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Home</li>
+                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 text-center py-4 my-2 text-xl hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Home</li>
                 </Link>
                 <Link href='/'>
-                <li className='hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-2 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50 '>About</li>
+                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50 '>About</li>
                 </Link>
                 <Link href='/'>
-                <li className='hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-2 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Skills</li>
+                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Skills</li>
                 </Link>
                 <Link href='/'>
-                <li className='hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-2 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Project</li>
+                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Projects</li>
                 </Link>
                 <Link href='/'>
-                <li className='hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-2 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Contact</li>
+                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Contact</li>
                 </Link>
               </ul>
                 <div className='flex items-center m-auto justify-center my-1 w-full sm:w-[80%]'>

@@ -30,7 +30,7 @@
         controls = new OrbitControls(camera, renderer.domElement);
 
         controls.autoRotate = true;
-        controls.autoRotateSpeed = 10;
+        controls.autoRotateSpeed = 15;
         controls.enableDamping = true;
 
         pointlight = new THREE.PointLight(0xffffff,1);

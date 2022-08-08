@@ -5,7 +5,8 @@
 @layer base {
 
   body {
-    @apply bg-[#121212] text-white tracking-wide
+    /* @apply bg-[#121212] text-white tracking-wide */
+    @apply bg-[#232741] text-white tracking-wide
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -27,14 +28,10 @@
   button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#9ddb64] to-[#30aa50]
   }
-/* 
-  * {
-    @apply border border-red-500
-  } */
 
 }
 
-#tsparticles {
+ #tsparticles {
   position: absolute;
   top: 85px;
   left: 0;
@@ -42,8 +39,11 @@
   right: 0;
   padding: 0;
   margin: 0;
-  z-index: -1; /* if you use -1 you have to set to `"window"` the interactivity.detectsOn property */
-}
+  z-index: -1; 
+} 
+
+
+
 
 .mainbody {
   position: absolute;
@@ -66,7 +66,8 @@
   top: 8px;
   left: -16px;
   /* padding: 5px; */
-  z-index:999
+  z-index:999;
+  cursor:grab;
 }
 
 .sidebar {
