@@ -1,17 +1,21 @@
 import React from 'react'
-import tldreddit from '../public/assets/projects/tldreddit2.png'
+import ProjectItem from './ProjectItem'
 import Image from 'next/image'
+import Link from 'next/link'
+import tldreddit from '../public/assets/projects/tldreddit.png'
+import emporium from '../public/assets/projects/emporium.png'
 
 const Projects = () => {
   return (
-    <div className='w-full'>
+    <div className='w-[90%] m-auto mt-4'>
       <div className='max-w-[1240px] mx-auto px-2 py-16'>
         <p className='text-xl tracking-widest uppercase text-[#9ddb64]'>Projects</p>
         <h2 className='py-4'>What I have Built</h2>
         <div className='grid md:grid-cols-2 gap-8'>
-          <div className='relative flex items-center justify-center h-auto w-full shadow-xl shadow-[#9ddb64] rounded-xl p-4 group hover:bg-gradient-to-r from-[#30aa50] to-[#9ddb64]'>
-            <Image src={tldreddit} alt='/' />
-          </div>
+         
+         <ProjectItem title='Emporium' projectType='Full Stack Project' backgroundImg={emporium} projectUrl='/emporium' />
+         <ProjectItem title='TLDReddit' projectType='React Project' backgroundImg={tldreddit} projectUrl='/tldreddit' />
+
         </div>
       </div>
     </div>

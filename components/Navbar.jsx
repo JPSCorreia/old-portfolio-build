@@ -36,7 +36,7 @@ function Navbar() {
               <li className='hover:shadow-custom pl-6 pr-6 ml-2  p-3 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Skills</li>
             </Link>
             <Link href='/'>
-              <li className='hover:shadow-custom pl-6 pr-6 ml-2  p-3 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Project</li>
+              <li className='hover:shadow-custom pl-6 pr-6 ml-2  p-3 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Projects</li>
             </Link>
             <Link href='/'>
               <li className='hover:shadow-custom pl-6 pr-6 p-3 ml-2  text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Contact</li>

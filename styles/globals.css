@@ -5,8 +5,8 @@
 @layer base {
 
   body {
-    /* @apply bg-[#121212] text-white tracking-wide */
-    @apply bg-[#232741] text-white tracking-wide
+    @apply bg-[#121212] text-white tracking-wide 
+  
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -26,7 +26,7 @@
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#9ddb64] to-[#30aa50]
+    @apply rounded-xl uppercase bg-gradient-to-r from-[#9ddb64] to-[#30aa50]
   }
 
 }
