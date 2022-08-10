@@ -7,6 +7,7 @@ import Particle from "../components/Particle";
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
+import Scroller from '../components/Scroller'
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
           <Skills />
           <Projects />
           <Contact />
+          <Scroller />
         </div>
       </main>
     </div>

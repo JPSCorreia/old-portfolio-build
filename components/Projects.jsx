@@ -7,8 +7,8 @@ import emporium from '../public/assets/projects/emporium.png'
 
 const Projects = () => {
   return (
-    <div className='w-[90%] m-auto mt-4'>
-      <div className='max-w-[1240px] mx-auto px-2 py-16'>
+    <div id='projects' className='w-[90%] m-auto mt-4 h-screen py-16'>
+      <div className='max-w-[1240px] flex flex-col justify-center h-full mx-auto px-2 py-16'>
         <p className='text-xl tracking-widest uppercase text-[#9ddb64]'>Projects</p>
         <h2 className='py-4'>What I have Built</h2>
         <div className='grid md:grid-cols-2 gap-8'>
@@ -18,6 +18,7 @@ const Projects = () => {
 
         </div>
       </div>
+      <div id='contact-top'></div>
     </div>
   )
 }
