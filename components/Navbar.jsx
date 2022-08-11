@@ -32,7 +32,7 @@ function Navbar() {
 
   // 
   return (
-    <div className={shadow? 'fixed w-full h-20 shadow-md bg-[#121212] shadow-[#121212] z-[100]' : 'fixed w-full h-20 bg-[#121212] z-[100]'}>
+    <div className={shadow? 'fixed w-full h-20 shadow-md bg-[#121212] shadow-[#121212] z-[100]' : 'fixed w-full h-20 z-[100]'}>
       <div className="flex justify-between items-center w-full h-full px-2 ml-16">
         <Image
           src="/assets/jcorreia-fullstackdev.png"
@@ -58,7 +58,7 @@ function Navbar() {
               <li className='hover:shadow-custom pl-6 pr-6 p-3 ml-2  text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Contact</li>
             </Link>
           </ul>
-          <div onClick={handleNav} className='lg:hidden rounded-full mr-24 cursor-pointer p-2 hover:shadow-sm hover:shadow-[#9ddb64] hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
+          <div onClick={handleNav} className='lg:hidden rounded-full mr-16 cursor-pointer p-2 hover:shadow-sm hover:shadow-[#9ddb64] hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
             <AiOutlineMenu size={32} />
           </div>
         </div>
@@ -89,19 +89,19 @@ function Navbar() {
             <div className=''>
               <ul className='flex flex-col uppercase justify-center align-center my-10'>
                 <Link href='/'>
-                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 text-center py-4 my-2 text-xl hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Home</li>
+                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 text-center py-4 my-2 text-xl hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Home</li>
                 </Link>
                 <Link href='/#about'>
-                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50 '>About</li>
+                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50 '>About</li>
                 </Link>
                 <Link href='/#skills'>
-                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Skills</li>
+                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Skills</li>
                 </Link>
                 <Link href='/#projects'>
-                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Projects</li>
+                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Projects</li>
                 </Link>
                 <Link href='/#contact'>
-                <li className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Contact</li>
+                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Contact</li>
                 </Link>
               </ul>
                 <div className='flex items-center m-auto justify-center my-1 w-full sm:w-[80%]'>
@@ -109,7 +109,9 @@ function Navbar() {
                   <FaLinkedinIn size={30}/>
                   </div>
                   <div className='rounded-full shadow-sm shadow-[#9ddb64] p-3 m-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
-                  <FaGithub size={30}/>
+                    <a href='https://github.com/JPSCorreia' target='_blank' rel='noreferrer noopener'>
+                      <FaGithub size={30}/>
+                    </a>
                   </div>
                   <div className='rounded-full shadow-sm shadow-[#9ddb64] p-3 m-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
                   <AiOutlineMail size={30}/>

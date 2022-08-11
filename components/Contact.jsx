@@ -69,7 +69,7 @@ const Contact = () => {
                         <textarea className='border-2 rounded-lg p-3 border-gray-300' rows="6" />
                       </div>
                       <div className='flex flex-row w-[95%] m-auto'>
-                        <button className='m-auto border border-gray-700 text-lg lg:text-xl w-full p-4 text-gray-700 mt-4 hover:scale-105 ease-in duration-300 hover:text-[#ffffff]'>Send Message</button>
+                        <button className='m-auto text-lg lg:text-xl w-full p-4 text-gray-700 mt-4 hover:scale-105 ease-in duration-300 hover:text-[#ffffff]'>Send Message</button>
                       </div>
                     </form>
                   </div>

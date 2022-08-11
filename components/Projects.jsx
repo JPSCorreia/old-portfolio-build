@@ -12,10 +12,18 @@ const Projects = () => {
         <p className='text-xl tracking-widest uppercase text-[#9ddb64]'>Projects</p>
         <h2 className='py-4'>What I have Built</h2>
         <div className='grid md:grid-cols-2 gap-8'>
-         
-         <ProjectItem title='Emporium' projectType='Full Stack Project' backgroundImg={emporium} projectUrl='/emporium' />
-         <ProjectItem title='TLDReddit' projectType='React Project' backgroundImg={tldreddit} projectUrl='/tldreddit' />
-
+          <ProjectItem 
+            title='Emporium' 
+            projectType='Full Stack Project' 
+            backgroundImg={emporium} 
+            projectUrl='/emporium' 
+          />
+          <ProjectItem 
+            title='TLDReddit' 
+            projectType='React Project' 
+            backgroundImg={tldreddit} 
+            projectUrl='/tldreddit' 
+          />
         </div>
       </div>
       <div id='contact-top'></div>

@@ -3,12 +3,12 @@ import React from 'react'
 import {AiOutlineMail} from 'react-icons/ai'
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
-import Particle from "./Particle";
+
 
 const Main = () => {
   return (
     <div id='home' className='w-full h-screen text-center'>
-      <Particle />
+
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
       
         <div>

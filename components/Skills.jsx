@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import {SiCss3, SiExpress, SiHtml5, SiRedux, SiJavascript, SiNodedotjs, SiReact, SiGithub, SiNextdotjs} from 'react-icons/si'
+import {SiCss3, SiExpress, SiHtml5, SiRedux, SiJavascript, SiNodedotjs, SiReact, SiGithub, SiNextdotjs, SiPostgresql} from 'react-icons/si'
 
 const Skills = () => {
   return (
@@ -76,6 +76,16 @@ const Skills = () => {
               </div>
               <div className='flex flex-col items-center justify-center'>
                 <h3>Redux</h3>
+              </div>
+            </div>
+          </div>
+          <div className='p-2 sm:p-4 shadow-lg shadow-[#9ddb64] rounded-xl hover:scale-105 ease-in duration-300'>
+            <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+              <div className='m-auto'>
+                <SiPostgresql color='#31648d'size={32} />
+              </div>
+              <div className='flex flex-col items-center justify-center'>
+                <h3>PostgreSQL</h3>
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ const ProjectItem = (props) => {
       <p className='pb-2 pt-2 text-white sm:text-2xl md:text-lg lg:text-2xl font-bold text-center mt-2'>
         {props.projectType}
       </p>
-      <Link href=''>
+      <Link href='/emporium'>
         <p className='text-center py-3 rounded-lg bg-white text-[#121212] font-bold sm:text-lg md:text-sm lg:text-lg cursor-pointer mt-2'>
           More Info
         </p>
