@@ -9,17 +9,18 @@ const ProjectItem = (props) => {
     <Image className='rounded-xl group-hover:opacity-40 ' src={props.backgroundImg} alt='/' />
     </Link>
     <Link href={props.projectUrl}>
-    <div className='hidden group-hover:block absolute top-[25%] translate-x-[0%] translate-y-[0%] '>
-      <h3 className='text-4xl md:text-2xl lg:text-4xl text-white tracking-wider text-center'>
+    <div className='absolute'>
+      <h3 className='absolute translate-x-[-50%] translate-y-[-250%] left-[50%] top-[50%] hidden group-hover:block text-2xl md:text-2xl lg:text-4xl text-white tracking-wider text-center'>
        {props.title}
       </h3>
-      <p className='pb-2 pt-2 text-white sm:text-2xl md:text-lg lg:text-2xl font-bold text-center mt-2'>
+      <p className='absolute translate-x-[-50%] translate-y-[-150%] hidden group-hover:block  text-white text-md md:text-lg lg:text-xl font-bold text-center w-[15rem] '>
         {props.projectType}
       </p>
-      <p className='p-3 text-center px-6 rounded-lg bg-white text-[#121212] font-bold sm:text-lg md:text-sm lg:text-lg cursor-pointer mt-2'>
+      <p className='absolute translate-x-[-50%] translate-y-[0%] mt-5 hidden group-hover:block p-3 text-center rounded-lg bg-white text-[#121212] font-bold text-md md:text-md lg:text-lg cursor-pointer w-[10rem] '>
         More Info
       </p>
     </div>
+    {/* top-[25%] translate-x-[0%] translate-y-[0%]  */}
     </Link>
   </div>
   )

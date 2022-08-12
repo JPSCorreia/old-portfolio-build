@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import Image from 'next/image'
 import emporiumImg from '../public/assets/projects/tldreddit-full.png'
@@ -20,8 +21,14 @@ const tldreddit = () => {
         <div className='col-span-4'>
         <h2 className='py-2 mb-4'>TLDReddit</h2>
           <p>            
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum eros nunc, id imperdiet ante semper in. Aliquam lacinia enim vitae arcu lobortis molestie. Sed leo velit, efficitur eu est sit amet, mattis volutpat lorem. In malesuada purus quis nibh lacinia facilisis. Curabitur cursus tortor a nisl aliquam consectetur. Nam a velit rutrum, laoreet tortor sit amet, pharetra massa. Maecenas pretium velit odio, ac fermentum dolor malesuada quis.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum eros nunc, id imperdiet ante semper in. Aliquam lacinia enim vitae arcu lobortis molestie. Sed leo velit, efficitur eu est sit amet, mattis volutpat lorem. In malesuada purus quis nibh lacinia facilisis. Curabitur cursus tortor a nisl aliquam consectetur. Nam a velit rutrum, laoreet tortor sit amet, pharetra massa. Maecenas pretium velit odio, ac fermentum dolor malesuada quis.
+          TLDReddit is an alternative way to browse reddit as a Single Page Application, it was built using React, bootstrapped with create-react-app and is hosted on netlify. 
+          </p>
+          <p>
+            Users are able browse any subreddit they want, they can expand any thread and comment they want and preview all types of media without ever needing to reload the page. 
+          </p>
+          <p>
+            Data handling was done by fetching data using reddit's API, routing was handled by react-router and state management by Redux.
+            Jest was used as the testing framework and the user interface was built using Sass with no use of a component library.
           </p>
 
         </div>
