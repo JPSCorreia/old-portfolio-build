@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const About = () => {
   return (
@@ -18,7 +19,9 @@ const About = () => {
           <p className='py-2 text-gray-200'>
             Vivamus sem velit, iaculis sed nibh at, interdum consectetur magna. Curabitur porta dolor quam, nec efficitur ex eleifend eu. Pellentesque in purus nisl. Pellentesque volutpat nisi ac diam auctor imperdiet. Mauris vitae quam ut ligula congue mollis. Pellentesque sed tempor elit. Sed neque sem, fermentum id enim scelerisque, consequat dictum libero.
           </p>
-          <p className='py-2 cursor-pointer text-gray-200 underline'>Check out some of my projects </p>
+          <Link href='/#projects'>
+            <p className='py-2 cursor-pointer text-gray-200 underline'>Check out some of my projects </p>
+          </Link>
         </div>
         <div className='hidden sm:inline-block  rounded-full shadow-lg shadow-[#9ddb64] m-auto hover:scale-110 ease-in duration-100 justify-center items-center'>
             <Image 

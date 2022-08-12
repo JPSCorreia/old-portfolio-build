@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import emporiumImg from '../public/assets/projects/emporium-full.png'
+import emporiumImg from '../public/assets/projects/tldreddit-full.png'
 import {RiRadioButtonFill} from 'react-icons/ri'
-import {SiCss3, SiExpress, SiAuth0, SiRedux, SiNodedotjs, SiReact, SiPostgresql} from 'react-icons/si'
+import {SiJest, SiRedux, SiReact} from 'react-icons/si'
+import {DiSass} from 'react-icons/di'
 
-
-const emporium = () => {
+const tldreddit = () => {
   return (
     <div className='w-full'>
       <div className='w-screen h-[20vh] lg:h-[30vh] relative top-20'>
@@ -18,9 +18,8 @@ const emporium = () => {
       </div>
       <div className='max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-16'>
         <div className='col-span-4'>
-        <h2 className='py-2 mb-2'>Emporium</h2>
+        <h2 className='py-2 mb-4'>TLDReddit</h2>
           <p>            
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum eros nunc, id imperdiet ante semper in. Aliquam lacinia enim vitae arcu lobortis molestie. Sed leo velit, efficitur eu est sit amet, mattis volutpat lorem. In malesuada purus quis nibh lacinia facilisis. Curabitur cursus tortor a nisl aliquam consectetur. Nam a velit rutrum, laoreet tortor sit amet, pharetra massa. Maecenas pretium velit odio, ac fermentum dolor malesuada quis.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum eros nunc, id imperdiet ante semper in. Aliquam lacinia enim vitae arcu lobortis molestie. Sed leo velit, efficitur eu est sit amet, mattis volutpat lorem. In malesuada purus quis nibh lacinia facilisis. Curabitur cursus tortor a nisl aliquam consectetur. Nam a velit rutrum, laoreet tortor sit amet, pharetra massa. Maecenas pretium velit odio, ac fermentum dolor malesuada quis.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum eros nunc, id imperdiet ante semper in. Aliquam lacinia enim vitae arcu lobortis molestie. Sed leo velit, efficitur eu est sit amet, mattis volutpat lorem. In malesuada purus quis nibh lacinia facilisis. Curabitur cursus tortor a nisl aliquam consectetur. Nam a velit rutrum, laoreet tortor sit amet, pharetra massa. Maecenas pretium velit odio, ac fermentum dolor malesuada quis.
           </p>
@@ -48,44 +47,29 @@ const emporium = () => {
             </div>
             <div className='flex flex-row flex-start justify-start'>
               <div className='flex items-center'>
-                <SiNodedotjs color='#43853d' size={24} />
+                <DiSass color='#c76594' size={24} />
               </div>
               <div className='m-2'>
-                <h3>Node.js</h3>
+                <h3>Sass</h3>
               </div>
             </div>
             <div className='flex flex-row flex-start justify-start'>
               <div className='flex items-center'>
-                <SiExpress color='#ffffff' size={24} />
+                <SiJest color='#c03c14' size={24} />
               </div>
               <div className='m-2'>
-                <h3>Express.js</h3>
+                <h3>Jest</h3>
               </div>
             </div>
-            <div className='flex flex-row flex-start justify-start'>
-              <div className='flex items-center'>
-                <SiPostgresql color='#31648d' size={24} />
-              </div>
-              <div className='m-2'>
-                <h3>PostgreSQL</h3>
-              </div>
-            </div>
-            <div className='flex flex-row flex-start justify-start'>
-              <div className='flex items-center'>
-                <SiAuth0 color='#ff541a' size={24} />
-              </div>
-              <div className='m-2'>
-                <h3>Auth0</h3>
-              </div>
-            </div>
+
             </div>
           </div>
         </div>
         <div className='flex flex-row'>
-          <a href='https://emporium-shop.herokuapp.com/' target='_blank' rel='noreferrer noopener'>
+          <a href='https://serene-sinoussi-2933f8.netlify.app/' target='_blank' rel='noreferrer noopener'>
           <button className='text-lg lg:text-xl px-6 py-3 mt-2 mr-2 text-gray-700 hover:scale-105 ease-in duration-300 hover:text-[#ffffff]'>Demo</button>
           </a>
-          <a href='https://github.com/JPSCorreia/emporium-shop-frontend' target='_blank' rel='noreferrer noopener'>
+          <a href='https://github.com/JPSCorreia/TLDReddit' target='_blank' rel='noreferrer noopener'>
           <button className='text-lg lg:text-xl px-6 py-3 mt-2 ml-2 text-gray-700 hover:scale-105 ease-in duration-300 hover:text-[#ffffff]'>Code</button>
           </a>
         </div>
@@ -94,4 +78,4 @@ const emporium = () => {
   )
 }
 
-export default emporium
+export default tldreddit
