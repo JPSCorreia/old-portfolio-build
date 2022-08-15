@@ -16,13 +16,13 @@ const Projects = () => {
             title='Emporium' 
             projectType='Full Stack Project' 
             backgroundImg={emporium} 
-            projectUrl='/emporium' 
+            projectUrl='emporium' 
           />
           <ProjectItem 
             title='TLDReddit' 
             projectType='React Project' 
             backgroundImg={tldreddit} 
-            projectUrl='/tldreddit' 
+            projectUrl='tldreddit' 
           />
         </div>
       </div>

@@ -3,12 +3,13 @@ import Image from 'next/image'
 import emporiumImg from '../public/assets/projects/emporium-full.png'
 import {RiRadioButtonFill} from 'react-icons/ri'
 import {SiCss3, SiExpress, SiAuth0, SiRedux, SiNodedotjs, SiReact, SiPostgresql} from 'react-icons/si'
-
+import Link from 'next/link'
+import {MdArrowBack} from 'react-icons/md'
 
 const emporium = () => {
   return (
-    <div className='w-full'>
-      <div className='w-screen h-[20vh] lg:h-[30vh] relative top-20'>
+    <div id='emporium' className='w-full'>
+      <div className='w-screen h-[20vh] lg:h-[30vh] relative top-20 shadow-lg shadow-[#9ddb64] rounded-xl'>
         <Image className='absolute left-0 h-[20vh] lg:h-[30vh] z-10' layout='fill' objectFit='cover' src={emporiumImg} alt='/' />
         <div className='absolute left-0 w-full h-[20vh] lg:h-[30vh] bg-black/80 z-10'>
         </div>
@@ -16,13 +17,23 @@ const emporium = () => {
           <p className='text-xl tracking-widest uppercase text-[#9ddb64]'>Project</p>
         </div>
       </div>
-      <div className='max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-16'>
+      <div className='max-w-[1240px] mx-auto p-6 grid lg:grid-cols-5 gap-8 mt-20'>
         <div className='col-span-4'>
         <h2 className='py-2 mb-2'>Emporium</h2>
           <p>            
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum eros nunc, id imperdiet ante semper in. Aliquam lacinia enim vitae arcu lobortis molestie. Sed leo velit, efficitur eu est sit amet, mattis volutpat lorem. In malesuada purus quis nibh lacinia facilisis. Curabitur cursus tortor a nisl aliquam consectetur. Nam a velit rutrum, laoreet tortor sit amet, pharetra massa. Maecenas pretium velit odio, ac fermentum dolor malesuada quis.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum eros nunc, id imperdiet ante semper in. Aliquam lacinia enim vitae arcu lobortis molestie. Sed leo velit, efficitur eu est sit amet, mattis volutpat lorem. In malesuada purus quis nibh lacinia facilisis. Curabitur cursus tortor a nisl aliquam consectetur. Nam a velit rutrum, laoreet tortor sit amet, pharetra massa. Maecenas pretium velit odio, ac fermentum dolor malesuada quis.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum eros nunc, id imperdiet ante semper in. Aliquam lacinia enim vitae arcu lobortis molestie. Sed leo velit, efficitur eu est sit amet, mattis volutpat lorem. In malesuada purus quis nibh lacinia facilisis. Curabitur cursus tortor a nisl aliquam consectetur. Nam a velit rutrum, laoreet tortor sit amet, pharetra massa. Maecenas pretium velit odio, ac fermentum dolor malesuada quis.
+            Emporium is a PERN stack e-commerce Single Page Application. 
+            Users can register and login to the application, browse or search for products, 
+            place an order, make a purchase and finally leave a review for the products they bought.
+            You can also add and edit different delivery addresses and switch between a light and dark color theme.
+          </p>
+          <br/>
+          <p>            
+            This application was built using React, bootstrapped with create-react-app and is hosted on Heroku.
+            User registration and login are handled by Auth0, state management with Redux and 
+            routing with react-router.
+            User interface was built with Chakra UI as a component library and using formik and yup for form management and validation.
+            Backend API is handled by an Express.js server using various middleware libraries for server protection and token validation like helmet, hpp and csurf.
+            Database is powered by PostgreSQL.
           </p>
 
         </div>
@@ -89,6 +100,13 @@ const emporium = () => {
           <button className='text-lg lg:text-xl px-6 py-3 mt-2 ml-2 text-gray-700 hover:scale-105 ease-in duration-300 hover:text-[#ffffff]'>Code</button>
           </a>
         </div>
+      </div>
+      <div className='flex justify-center mb-8'>
+          <Link href='/#projects' >
+           <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-6 m-1 mt-4 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
+            <MdArrowBack className=''  size={30} />
+           </div>
+          </Link>
       </div>
     </div>
   )

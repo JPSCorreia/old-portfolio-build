@@ -21,17 +21,17 @@ const Main = () => {
           </h1>
           <p className='py-4 text-gray-200 max-w-[75%] m-auto'>I'm a full stack web developer and I specialize in building and designing responsive full stack web applications using the latest technologies.</p>
           <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
-            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-3 m-1 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
-              <FaLinkedinIn size={24}/>
+            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-4 m-1 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
+              <FaLinkedinIn size={30}/>
             </div>
-            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-3 m-1 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
-              <FaGithub size={24}/>
+            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-4 m-1 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
+              <FaGithub size={30}/>
             </div>
-            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-3 m-1 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
-              <AiOutlineMail size={24}/>
+            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-4 m-1 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
+              <AiOutlineMail size={30}/>
             </div>
-            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-3 m-1 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
-              <BsFillPersonLinesFill size={24}/>
+            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-4 m-1 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
+              <BsFillPersonLinesFill size={30}/>
             </div>
           </div>
         </div>

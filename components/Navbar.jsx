@@ -33,7 +33,7 @@ function Navbar() {
   // 
   return (
     <div className={shadow? 'fixed w-full h-20 shadow-md bg-[#121212] shadow-[#121212] z-[100]' : 'fixed w-full h-20 z-[100]'}>
-      <div className="flex justify-between items-center w-full h-full px-2 ml-16">
+      <div className="flex justify-between items-center w-full h-full px-2 ml-6">
         <Image
           src="/assets/jcorreia-fullstackdev.png"
           alt="/"
@@ -41,7 +41,7 @@ function Navbar() {
           height='78'
         />
         <div>
-          <ul className='hidden lg:flex uppercase mr-20'>
+          <ul className='hidden lg:flex uppercase mr-6'>
             <Link href='/'>
               <li className='hover:shadow-custom pl-6 pr-6 ml-2 text-center p-3 text-xl hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Home</li>
             </Link>
@@ -72,7 +72,7 @@ function Navbar() {
           }
         >
           <div> 
-            <div className='flex w-full justify-between items-center ml-16 sidebar-image'>
+            <div className='flex w-full justify-between items-center ml-4 sidebar-image'>
               <Image 
                 src="/assets/jcorreia-fullstackdev.png" 
                 className='sidebar-image'
@@ -80,7 +80,7 @@ function Navbar() {
                 width='268'
                 height='78'
               />
-              <div onClick={handleNav} className=' mr-16 rounded-full hover:shadow-sm hover:shadow-[#9ddb64] p-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
+              <div onClick={handleNav} className=' mr-6 rounded-full hover:shadow-sm hover:shadow-[#9ddb64] p-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
                 <AiOutlineClose size={32} />
               </div>
             </div>
