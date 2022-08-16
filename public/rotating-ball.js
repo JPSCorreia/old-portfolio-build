@@ -9,15 +9,19 @@
         scene = new THREE.Scene();
 
         renderer = new THREE.WebGLRenderer({alpha:true,antialias:true});
-        console.log(window.innerWidth/22)
-        console.log(window.innerHeight/22)
+
+
         console.log(window.innerWidth/window.innerHeight)
-       
-        // renderer.setSize(window.innerWidth/24,window.innerHeight/24);
-        renderer.setSize(116,60);
+        console.log(window.innerWidth)
+        console.log(window.innerHeight)
+
+        renderer.setSize(window.innerWidth/2,window.innerHeight/2);
+        // renderer.setSize(window.innerWidth, window.innerHeight);
         // 1642, 1323
         renderer.domElement.classList.add('ball')
-        document.body.appendChild(renderer.domElement);
+        document.getElementById('ball-place').appendChild(renderer.domElement);
+        // document.body.appendChild(renderer.domElement);
+       
 
         console.log(renderer.domElement)
 
@@ -25,12 +29,15 @@
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
         renderer.toneMappingExposure = 1.25;
 
-        camera = new THREE.PerspectiveCamera(100,2,1,1000);
-        camera.position.set(0,0,132);
+        // camera = new THREE.PerspectiveCamera(100,2,1,1000);
+        camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+        // camera.position.set(500,50,500);
+        camera.position.z = 80;
+        // camera.position.y = 500;
         controls = new OrbitControls(camera, renderer.domElement);
 
         controls.autoRotate = true;
-        controls.autoRotateSpeed = 15;
+        controls.autoRotateSpeed = 2;
         controls.enableDamping = true;
 
         pointlight = new THREE.PointLight(0xffffff,1);
@@ -48,19 +55,33 @@
           texture.repeat.x = 10;
           texture.repeat.y = 6;
 
+
+          const color1 = new THREE.Color("#9ddb64");
+
           const ballMaterial = {
             clearcoat: 1.0,
             cleacoatRoughness:0.1,
             metalness: 0.9,
             roughness:0.5,
-            color: 0x66d41a,
+            color: color1,
             normalMap: texture,
             normalScale: new THREE.Vector2(0.15,0.15),
-            envMap: envmap.texture
+            envMap: envmap.texture,
+            transparent: true,
+            opacity: 0.5,
+            wireframe: true //set's the wireframe
+            
           };
 
-          let ballGeo = new THREE.SphereGeometry(100,64,64);
+          
+          let ballGeo = new THREE.SphereGeometry(40,40,40);
           let ballMat = new THREE.MeshPhysicalMaterial(ballMaterial);
+          const material = new THREE.MeshStandardMaterial({
+            color: color1,
+            opacity: 0.4,
+            transparent: true,
+            wireframe: true //set's the wireframe
+          });
           let ballMesh = new THREE.Mesh(ballGeo,ballMat);
           scene.add(ballMesh);
 

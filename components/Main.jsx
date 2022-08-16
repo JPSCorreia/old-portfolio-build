@@ -17,6 +17,7 @@ const Main = () => {
             Let's Build Something Together
           </p> */}
           <h1 className='py-4 text-gray-100'>
+            <div className='flex justify-center pb-4 sm:pb-8' id='ball-place'></div>
             Greetings, I'm <span className='text-[#9ddb64]'>João Correia</span> 
           </h1>
           <p className='py-4 text-gray-200 max-w-[75%] m-auto'>I'm a full stack web developer and I specialize in building and designing responsive full stack web applications using the latest technologies.</p>

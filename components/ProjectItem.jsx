@@ -6,7 +6,11 @@ const ProjectItem = (props) => {
   return (
     <div className='relative flex items-center justify-center cursor-pointer h-auto w-full shadow-xl shadow-[#9ddb64] rounded-xl p-4 group hover:bg-gradient-to-r from-[#30aa50] to-[#9ddb64] '>
     <Link href={`/${props.projectUrl}#${props.projectUrl}`} scroll={false}>
+    {/* <div> */}
+    <>
     <Image className='rounded-xl group-hover:opacity-40 ' src={props.backgroundImg} alt='/' />
+    {/* </div> */}
+    </>
     </Link>
     <Link href={props.projectUrl}>
     <div className='absolute'>

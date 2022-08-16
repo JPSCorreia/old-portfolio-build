@@ -33,13 +33,14 @@ function Navbar() {
   // 
   return (
     <div className={shadow? 'fixed w-full h-20 shadow-md bg-[#121212] shadow-[#121212] z-[100]' : 'fixed w-full h-20 z-[100]'}>
-      <div className="flex justify-between items-center w-full h-full px-2 ml-6">
-        <Image
-          src="/assets/jcorreia-fullstackdev.png"
-          alt="/"
-          width='268'
-          height='78'
-        />
+      <div className="flex justify-between items-center w-full h-full px-2 ml-3">
+          <Image
+            src="/assets/jcorreia-fullstackdev.png"
+            alt="/"
+            width='268'
+            height='78'
+            className='cursor-pointer'
+          />
         <div>
           <ul className='hidden lg:flex uppercase mr-6'>
             <Link href='/'>
@@ -58,7 +59,7 @@ function Navbar() {
               <li className='hover:shadow-custom pl-6 pr-6 p-3 ml-2  text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-100'>Contact</li>
             </Link>
           </ul>
-          <div onClick={handleNav} className='lg:hidden rounded-full mr-16 cursor-pointer p-2 hover:shadow-sm hover:shadow-[#9ddb64] hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
+          <div onClick={handleNav} className='lg:hidden rounded-full mr-6 cursor-pointer p-2 hover:shadow-sm hover:shadow-[#9ddb64] hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
             <AiOutlineMenu size={32} />
           </div>
         </div>
@@ -72,15 +73,15 @@ function Navbar() {
           }
         >
           <div> 
-            <div className='flex w-full justify-between items-center ml-4 sidebar-image'>
-              <Image 
-                src="/assets/jcorreia-fullstackdev.png" 
-                className='sidebar-image'
-                alt='/'
-                width='268'
-                height='78'
-              />
-              <div onClick={handleNav} className=' mr-6 rounded-full hover:shadow-sm hover:shadow-[#9ddb64] p-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
+            <div className='flex w-full justify-between items-center ml-3 sidebar-image'>
+                  <Image 
+                    src="/assets/jcorreia-fullstackdev.png" 
+                    className='sidebar-image cursor-pointer'
+                    alt='/'
+                    width='268'
+                    height='78'
+                  />
+              <div onClick={handleNav} className=' mr-4 rounded-full hover:shadow-sm hover:shadow-[#9ddb64] p-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
                 <AiOutlineClose size={32} />
               </div>
             </div>
