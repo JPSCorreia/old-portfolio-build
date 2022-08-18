@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const About = () => {
   return (
-    <div id='about' className='w-[90%] m-auto md:h-screen p-2 flex items-center py-32'>
+    <div id='about' className='w-[90%] m-auto md:h-screen p-2 flex items-center pt-32 mt-32'>
       <div className='max-w-[1240px] m-auto sm:grid grid-cols-3 gap-8'>
         <div className='col-span-2'>
           <p className='uppercase text-xl tracking-widest text-[#9ddb64]'>

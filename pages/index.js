@@ -20,9 +20,7 @@ export default function Home() {
       </Head>
       <main>
         <div className='maincontainer'>
-          
           <Main  className='' />
-          <canvas style={{display: "block", width: "320.2px", height: "264.6px"}} className="ball" width="320" height="264"></canvas>
           <About />
           <Skills />
           <Projects />

@@ -7,7 +7,7 @@ import emporium from '../public/assets/projects/emporium.png'
 
 const Projects = () => {
   return (
-    <div id='projects' className='w-[90%] m-auto mt-4 h-screen py-16'>
+    <div id='projects' className='w-[90%] m-auto h-screen pt-32 mt-32'>
       <div className='max-w-[1240px] flex flex-col justify-center h-full mx-auto px-2 py-16'>
         <p className='text-xl tracking-widest uppercase text-[#9ddb64]'>Projects</p>
         <h2 className='py-4'>What I have Built</h2>

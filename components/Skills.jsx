@@ -4,7 +4,7 @@ import {SiCss3, SiExpress, SiHtml5, SiRedux, SiJavascript, SiNodedotjs, SiReact,
 
 const Skills = () => {
   return (
-    <div id='skills' className='w-[90%] m-auto h-screen p-2 py-16 mt-16'>
+    <div id='skills' className='w-[90%] m-auto h-screen p-2 py-16 pb-0 pt-32 mt-32'>
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
         <p className='text-xl tracking-widest uppercase text-[#9ddb64]'>Skills</p>
         <h2 className='py-4'>What I Can Do</h2>
