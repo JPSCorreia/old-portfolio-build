@@ -1,126 +1,172 @@
-      import * as THREE from './build/three.module.js';
-      import { OrbitControls } from './OrbitControls.js';
-      import { FlakesTexture } from './FlakesTexture.js';
-      import { RGBELoader } from './RGBELoader.js';
+import * as THREE from './build/three.module.js';
+import { OrbitControls } from './OrbitControls.js';
+import { FlakesTexture } from './FlakesTexture.js';
 
-      let scene, camera, renderer, controls;
-      let pointlight, pointlight2, pointlight3, pointlight4, pointlight5, pointlight6,directlight;
-      let color1, color2, color3;
 
-      function init() {
+function main() {
 
-        // render options
-        scene = new THREE.Scene();
-        renderer = new THREE.WebGLRenderer({alpha:true,antialias:true});
-        renderer.domElement.classList.add('ball')
-        document.getElementById('ball-place').appendChild(renderer.domElement);
-        renderer.outputEncoding = THREE.sRGBEncoding;
-        renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        renderer.toneMappingExposure = 1.25;
-        let envmaploader = new THREE.PMREMGenerator(renderer);
+  const canvas = document.querySelector('#ball-place');
+  const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
 
-        // camera and position
-        camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-        renderer.setSize(window.innerWidth/2,window.innerHeight/2);
-        camera.position.z = 75;
+  // camera and position
+  const fov = 75;
+  const aspectRatio = window.innerWidth / window.innerHeight;  // the canvas default
+  renderer.setSize(window.innerWidth,window.innerHeight);
+  const near = 0.1;
+  const far = 1000;
+  const camera = new THREE.PerspectiveCamera(fov, aspectRatio, near, far);
+  camera.position.z = 75;
+  camera.position.y = 25;
+  const scene = new THREE.Scene();
 
-        // colors
-        color1 = new THREE.Color("#9ddb64");
-        color2 = new THREE.Color("#30aa50");
+  console.log(window.innerWidth/window.innerHeight)
+  console.log(window.innerWidth)
 
-        // controls
-        controls = new OrbitControls(camera, renderer.domElement);
-        controls.autoRotate = true;
-        controls.autoRotateSpeed = 1;
-        controls.enableDamping = true;
+  if ( window.innerWidth/window.innerHeight >= 1.6 && window.innerWidth/window.innerHeight <= 1.9 && window.innerHeight < 820) {
+    camera.position.z = 150;
+  }
+    else if (window.innerWidth/window.innerHeight > 1) {
+    camera.position.z = 115;
+  } else if (window.innerWidth/window.innerHeight > 0.84 && window.innerWidth/window.innerHeight <= 1) {
+    camera.position.z = 115;
+  } else if ( window.innerWidth/window.innerHeight > 0.7 && window.innerWidth/window.innerHeight <= 0.84) {
+    camera.position.z = 125;
+  } else if ( window.innerWidth/window.innerHeight > 0.62 && window.innerWidth/window.innerHeight <= 0.7){
+    camera.position.z = 125;
+  } else if ( window.innerWidth/window.innerHeight > 0.55 && window.innerWidth/window.innerHeight <= 0.62) {
+    camera.position.z = 150;
+  } else if ( window.innerWidth/window.innerHeight >= 0.4 && window.innerWidth/window.innerHeight <= 0.55) {
+    camera.position.z = 160;
+  } else {
+    camera.position.z = 180;
+  }
 
-        // light
-        pointlight = new THREE.PointLight(color1,1);
-        pointlight.position.set(200,1,1);
-        scene.add(pointlight);
-        pointlight2 = new THREE.PointLight(color2,1);
-        pointlight2.position.set(-200,1,1);
-        scene.add(pointlight2);
-        pointlight3 = new THREE.PointLight(color2,1);
-        pointlight3.position.set(1,200,1);
-        scene.add(pointlight3);
-        pointlight4 = new THREE.PointLight(color1,1);
-        pointlight4.position.set(1,-200,1);
-        scene.add(pointlight4);
-        pointlight5 = new THREE.PointLight(color1,1);
-        pointlight5.position.set(1,1,200);
-        scene.add(pointlight5);
-        pointlight6 = new THREE.PointLight(color2,1);
-        pointlight6.position.set(1,1,-200);
-        scene.add(pointlight6);
-        // directlight = new THREE.DirectionalLight(color1, 1);
-        // directlight.position.set(200, 200, 200);
-        // scene.add(directlight);
 
-        
-        new RGBELoader().setPath('textures/').load('cayley_interior_4k.hdr', function(hdrmap) {
 
-          // texture and material
-          let envmap = envmaploader.fromCubemap(hdrmap);
-          let texture = new THREE.CanvasTexture(new FlakesTexture());
-          texture.wrapS = THREE.RepeatWrapping;
-          texture.wrapT = THREE.RepeatWrapping;
-          texture.repeat.x = 10;
-          texture.repeat.y = 6;
-          const color1 = new THREE.Color("#9ddb64");
-          const color2 = new THREE.Color("#30aa50");
-          const ballMaterial = {
-            clearcoat: 1.0,
-            cleacoatRoughness:0.1,
-            metalness: 0.9,
-            roughness:0.5,
-            color: color1,
-            normalMap: texture,
-            normalScale: new THREE.Vector2(0.15,0.15),
-            // envMap: envmap.texture,
-            transparent: true,
-            opacity: 1,
-            wireframe: true
-          };
+  // colors
+  const color1 = new THREE.Color("#9ddb64");
+  const color2 = new THREE.Color("#30aa50");
+  const color3 = new THREE.Color("#ffffff");
 
-          // set configurations
-          let ballGeo = new THREE.SphereGeometry(40,40,40);
-          let ballMat = new THREE.MeshPhysicalMaterial(ballMaterial);
-          let ballMesh = new THREE.Mesh(ballGeo,ballMat);
-          scene.add(ballMesh);
-          animate();
 
-        });
-
-        // check if renderer's canvas is not already the size its being displayed as and if so set its size.
-        function resizeRendererToDisplaySize(renderer) {
-          const canvas = renderer.domElement;
-          const width = canvas.clientWidth;
-          const height = canvas.clientHeight;
-          console.log('testetet')
-          const needResize = canvas.width !== width || canvas.height !== height;
-          if (needResize) {
-            renderer.setSize(width, height, false);
-          }
-          return needResize;
-        }
-        if (resizeRendererToDisplaySize(renderer)) {
-          const canvas = renderer.domElement;
-          camera.aspect = canvas.clientWidth / canvas.clientHeight;
-          camera.updateProjectionMatrix();
-        }
-      }
+  //controls
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 1;
+  controls.enableDamping = true;
 
 
 
 
-      // animate
-      function animate() {
-        controls.update();
-        renderer.render(scene, camera);
-        requestAnimationFrame(animate);
-      }
-      init();
+  // light
+  const pointlight = new THREE.PointLight(color1,1);
+  pointlight.position.set(200,1,1);
+  scene.add(pointlight);
+  const pointlight2 = new THREE.PointLight(color2,1);
+  pointlight2.position.set(-200,1,1);
+  scene.add(pointlight2);
+  const pointlight3 = new THREE.PointLight(color2,1);
+  pointlight3.position.set(1,200,1);
+  scene.add(pointlight3);
+  const pointlight4 = new THREE.PointLight(color1,1);
+  pointlight4.position.set(1,-200,1);
+  scene.add(pointlight4);
+  const pointlight5 = new THREE.PointLight(color1,1);
+  pointlight5.position.set(1,1,200);
+  scene.add(pointlight5);
+  const pointlight6 = new THREE.PointLight(color2,1);
+  pointlight6.position.set(1,1,-200);
+  scene.add(pointlight6);
+
+  // texture and material
+  let texture = new THREE.CanvasTexture(new FlakesTexture());
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
+  texture.repeat.x = 10;
+  texture.repeat.y = 6;
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 0.75;
+  const material = {
+    clearcoat: 1.0,
+    cleacoatRoughness:0.1,
+    metalness: 0.9,
+    roughness:0.5,
+    color: color1,
+    normalMap: texture,
+    normalScale: new THREE.Vector2(0.15,0.15),
+    lightMapIntensity: 2,
+    attenuationColor: color1,
+    sheenColor: color1,
+    specularColor: color1,
+    ior: 0,
+    reflectivity: 1,
+    transparent: true,
+    opacity: 1,
+    wireframe: true,
+  };
+  const radius = 40;
+  const widthSegments = 40;
+  const heightSegments = 40;
+  const ballGeometry = new THREE.SphereGeometry(radius,widthSegments,heightSegments);
+
+
+
+  const spriteReactMap = new THREE.TextureLoader().load( '../assets/react-icon2.png' );
+  const spriteReactMaterial = new THREE.SpriteMaterial( { map: spriteReactMap, color: '#00ccff', fog: false } );
+  const spriteReact = new THREE.Sprite( spriteReactMaterial );
+  spriteReact.position.set(0, 0, 50)
+  spriteReact.scale.set( 15, 15, 15);
+  scene.add( spriteReact );
+
+  const spriteHtmlMap = new THREE.TextureLoader().load( '../assets/html-icon.png' );
+  const spriteHtmlMaterial = new THREE.SpriteMaterial( { map: spriteHtmlMap, color: '#dd4b25' , fog: false } );
+  const spriteHtml = new THREE.Sprite( spriteHtmlMaterial );
+  spriteHtml.position.set(-37.5, 0, 37.5)
+  spriteHtml.scale.set( 15, 15, 15);
+  scene.add( spriteHtml );
+
+  const spriteCssMap = new THREE.TextureLoader().load( '../assets/css-icon.png' );
+  const spriteCssMaterial = new THREE.SpriteMaterial( { map: spriteCssMap, color: '#2762e9', fog: false } );
+  const spriteCss = new THREE.Sprite( spriteCssMaterial );
+  spriteCss.position.set(-50, 0, 0)
+  spriteCss.scale.set( 15, 15, 15);
+  scene.add( spriteCss )
+
+  const spriteJavascriptMap = new THREE.TextureLoader().load( '../assets/javascript-icon.png' );
+  const spriteJavascriptMaterial = new THREE.SpriteMaterial( { map: spriteJavascriptMap, color: '#efd81f', fog: false } );
+  const spriteJavascript = new THREE.Sprite( spriteJavascriptMaterial );
+  spriteJavascript.position.set(-37.5, 0, -37.5)
+  spriteJavascript.scale.set( 15, 15, 15);
+  scene.add( spriteJavascript );
+
+  const spriteNodeMap = new THREE.TextureLoader().load( '../assets/node-icon.png' );
+  const spriteNodeMaterial = new THREE.SpriteMaterial( { map: spriteNodeMap, color: '#43853d', fog: false } );
+  const spriteNode = new THREE.Sprite( spriteNodeMaterial );
+  spriteNode.position.set(0, 0, -50)
+  spriteNode.scale.set( 15, 15, 15);
+  scene.add( spriteNode );
+
+  const spriteExpressMap = new THREE.TextureLoader().load( '../assets/express-icon.png' );
+  const spriteExpressMaterial = new THREE.SpriteMaterial( { map: spriteExpressMap, color: '#ffffff', fog: false } );
+  const spriteExpress = new THREE.Sprite( spriteExpressMaterial );
+  spriteExpress.position.set(37.5, 0, -37.5)
+  spriteExpress.scale.set( 15, 15, 15);
+  scene.add( spriteExpress );
+
+  const spritePostgreSQLMap = new THREE.TextureLoader().load( '../assets/postgresql-icon.png' );
+  const spritePostgreSQLMaterial = new THREE.SpriteMaterial( { map: spritePostgreSQLMap, color: '#31648d', fog: false } );
+  const spritePostgreSQL = new THREE.Sprite( spritePostgreSQLMaterial );
+  spritePostgreSQL.position.set(50, 0, 0)
+  spritePostgreSQL.scale.set( 15, 15, 15);
+  scene.add( spritePostgreSQL );
+
+  const spriteReduxMap = new THREE.TextureLoader().load( '../assets/redux-icon.png' );
+  const spriteReduxMaterial = new THREE.SpriteMaterial( { map: spriteReduxMap, color: '#764abc', fog: false } );
+  const spriteRedux = new THREE.Sprite( spriteReduxMaterial );
+  spriteRedux.position.set(37.5, 0, 37.5)
+  spriteRedux.scale.set( 15, 15, 15);
+  scene.add( spriteRedux );
 
 
 
@@ -134,62 +180,46 @@
 
 
 
+  function makeInstance(geometry, x = 0, y = 0) {
+    const ballMaterial = new THREE.MeshPhysicalMaterial(material);
+    const ballMesh = new THREE.Mesh(geometry,ballMaterial);
+    scene.add(ballMesh);
+    
+    ballMesh.position.x = x;
+    ballMesh.position.y = y;
+
+    return ballMesh
+  }
 
 
 
 
+  const spheres = [
+    makeInstance(ballGeometry),
+  ]
+  
+  
 
+  function render(time) {
+    time *= 0.001;
 
+    spheres.forEach((sphere, ndx) => {
+      const speed = 1 + ndx * .1;
+      const rot = time * speed;
+      sphere.rotation.x = 0;
+      sphere.rotation.y = rot/8;
+      // imageMesh.rotation.y = rot/2
+      // imageMesh2.rotation.y = rot/2
+      // card.rotation.y = rot/2;
 
+    });
+    
+    controls.update();
+    renderer.render(scene, camera);
+    requestAnimationFrame(render);
+  }
 
+  requestAnimationFrame(render);
+}
 
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-
-              // function redimensionate() {
-        //   console.log(window.innerWidth/window.innerHeight)
-        //   console.log(window.innerWidth)
-        //   console.log(window.innerHeight)
-        //   console.log(50 / (window.innerWidth/window.innerHeight))
-        //   camera.position.z = (50 / (window.innerWidth/window.innerHeight));
-        //   camera.aspect = window.innerWidth/window.innerHeight;
-        //   camera.updateProjectionMatrix();
-        //   renderer.setSize(window.innerWidth/2, window.innerHeight/2);
-        //   renderer.render(scene, camera);
-        // }
-        // window.addEventListener('resize', redimensionate)
-        
-
-                // if (window.innerWidth/window.innerHeight > 0.84) {
-        //   // renderer.setSize(window.innerWidth/1.5,window.innerHeight/1.5);
-        //   camera.position.z = 75;
-        // } else if ( window.innerWidth/window.innerHeight > 0.7 && window.innerWidth/window.innerHeight <= 0.84) {
-        //   // renderer.setSize(window.innerWidth/1.3,window.innerHeight/1.3);
-        //   camera.position.z = 85;
-        // } else if ( window.innerWidth/window.innerHeight > 0.62 && window.innerWidth/window.innerHeight <= 0.7){
-        //   // renderer.setSize(window.innerWidth/1.2,window.innerHeight/1.2);
-        //   camera.position.z = 95;
-        // } else if ( window.innerWidth/window.innerHeight > 0.55 && window.innerWidth/window.innerHeight <= 0.62) {
-        //   // renderer.setSize(window.innerWidth/1,window.innerHeight/1);
-        //   camera.position.z = 100;
-        // } else if ( window.innerWidth/window.innerHeight >= 0.4 && window.innerWidth/window.innerHeight <= 0.55) {
-        //   // renderer.setSize(window.innerWidth/1,window.innerHeight/1);
-        //   camera.position.z = 115;
-        // } else {
-        //   // renderer.setSize(window.innerWidth/1,window.innerHeight/1);
-        //   camera.position.z = 150;
-        // }
+main();

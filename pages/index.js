@@ -26,6 +26,7 @@ export default function Home() {
           <Projects />
           <Contact />
           <Scroller />
+          <canvas className='flex flex-col justify-center' id='ball-place'></canvas>
         </div>
       </main>
     </div>

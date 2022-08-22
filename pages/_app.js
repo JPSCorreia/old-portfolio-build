@@ -2,14 +2,15 @@ import Navbar from '../components/Navbar'
 import '../styles/globals.css'
 import Script from 'next/script'
 import Particle from "../components/Particle";
+import 'animate.css';
 
 function MyApp({ Component, pageProps }) {
   return (
     <> 
-      <Script type="module" id='ball' src='./rotating-ball-new.js'>
+      <Script type="module" id='ball' src='./rotating-ball.js'>
       </Script>
-      {/* <canvas style="display: block; width: 320.2px; height: 264.6px;" className="ball" width="320" height="264"></canvas> */}
-      {/* <canvas style={{display: "block", width: "320.2px", height: "264.6px"}} className="ball" width="320" height="264"></canvas> */}
+      {/* <Script type="module" id='scroll-bar' src='./scroll-bar.js'>
+      </Script> */}
       <Particle />
       <Navbar />
       <Component {...pageProps} />

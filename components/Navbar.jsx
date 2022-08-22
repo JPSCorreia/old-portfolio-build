@@ -7,6 +7,7 @@ import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 
+
 function Navbar() {
 
   const [nav, setNav] = useState(false)
@@ -32,7 +33,9 @@ function Navbar() {
 
   // 
   return (
-    <div className={shadow? 'fixed w-full h-20 shadow-md bg-[#121212] shadow-[#121212] z-[100]' : 'fixed w-full h-20 z-[100]'}>
+    <div className={shadow? 'fixed w-full h-20 shadow-md bg-[#121212] shadow-[#121212] z-[9999]' : 'fixed w-full h-20 z-[100]'}>
+      {/* <canvas className='flex flex-col justify-center' id='ball-place-2'></canvas> */}
+      {/* <div className='scroll-tracker shadow-lg shadow-[#9ddb64]'></div> */}
       <div className="flex justify-between items-center w-full h-full px-2 ml-3">
           <Image
             src="/assets/jcorreia-fullstackdev.png"
@@ -68,41 +71,41 @@ function Navbar() {
         <div 
           className={ 
             nav
-            ? 'shadow-sm shadow-[#9ddb64] fixed h-screen left-0 top-0 sidebar sm:w-[70%] md:w-[60%] lg:w-[60%] bg-[#121212] pr-4 pb-4 pl-3 ease-in duration-200 ' 
-            : 'shadow-sm shadow-[#9ddb64] fixed h-screen left-[-350%] top-0 sidebar pr-4 pb-4 pl-4 ease-in duration-200'
+            ? 'p-0 shadow-sm shadow-[#9ddb64] fixed h-screen right-0 top-0 sidebar sm:w-[70%] md:w-[60%] lg:w-[60%] bg-[#121212] ease-in duration-200 ' 
+            : 'p-0 shadow-sm shadow-[#9ddb64] fixed h-screen right-[-350%] top-0 sidebar ease-in duration-200'
           }
         >
           <div> 
-            <div className='flex w-full justify-between items-center ml-3 sidebar-image'>
-                  <Image 
+            <div className='w-[98%] flex justify-end items-center h-20 bg-transparent sidebar-image border-b border-[#9ddb64] sidebar-border'>
+                  {/* <Image 
                     src="/assets/jcorreia-fullstackdev.png" 
                     className='sidebar-image cursor-pointer'
                     alt='/'
                     width='268'
                     height='78'
-                  />
-              <div onClick={handleNav} className=' mr-4 rounded-full hover:shadow-sm hover:shadow-[#9ddb64] p-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
+                  /> */}
+              <div onClick={handleNav} className=' mr-2 rounded-full hover:shadow-sm hover:shadow-[#9ddb64] p-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-200'>
                 <AiOutlineClose size={32} />
               </div>
             </div>
-            <div className='border-b border-[#9ddb64] sidebar-border'>
-            </div>
+            {/* <div className='border-b border-[#9ddb64] sidebar-border'>
+            </div> */}
             <div className=''>
               <ul className='flex flex-col uppercase justify-center align-center my-10'>
                 <Link href='/'>
-                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 text-center py-4 my-2 text-xl hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Home</li>
+                <li onClick={() => setNav(false)} className='w-[95%] hover:shadow-custom hover:shadow-[#9ddb64] text-center py-4 my-2 ml-2 text-xl hover:text-[#9ddb64] hover:scale-105 ease-in duration-50'>Home</li>
                 </Link>
                 <Link href='/#about'>
-                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50 '>About</li>
+                <li onClick={() => setNav(false)} className='w-[95%] hover:shadow-custom hover:shadow-[#9ddb64] py-4 my-2 ml-2 text-xl text-center hover:text-[#9ddb64] hover:scale-105 ease-in duration-50 '>About</li>
                 </Link>
                 <Link href='/#skills'>
-                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Skills</li>
+                <li onClick={() => setNav(false)} className='w-[95%] hover:shadow-custom hover:shadow-[#9ddb64] py-4 my-2 ml-2 text-xl text-center hover:text-[#9ddb64] hover:scale-105 ease-in duration-50'>Skills</li>
                 </Link>
                 <Link href='/#projects'>
-                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Projects</li>
+                <li onClick={() => setNav(false)} className='w-[95%] hover:shadow-custom hover:shadow-[#9ddb64] py-4 my-2 ml-2 text-xl text-center hover:text-[#9ddb64] hover:scale-105 ease-in duration-50'>Projects</li>
                 </Link>
                 <Link href='/#contact'>
-                <li onClick={() => setNav(false)} className='w-[97%] hover:shadow-custom hover:shadow-[#9ddb64] ml-1 mr-1 py-4 my-2 text-xl text-center hover:text-[#9ddb64] hover:scale-110 ease-in duration-50'>Contact</li>
+                <li onClick={() => setNav(false)} className='w-[95%] hover:shadow-custom hover:shadow-[#9ddb64] py-4 my-2 ml-2 text-xl text-center hover:text-[#9ddb64] hover:scale-105 ease-in duration-50'>Contact</li>
                 </Link>
               </ul>
                 <div className='flex items-center m-auto justify-center my-1 w-full sm:w-[80%]'>
