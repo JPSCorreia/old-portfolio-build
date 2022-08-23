@@ -43,9 +43,10 @@ function main() {
 
 
 
-  // colors
-  const color1 = new THREE.Color("#9ddb64");
-  const color2 = new THREE.Color("#30aa50");
+  // colors blue: #A5F3FC (200), #67E8F9 (300), #22D3F8 (400) and #0891B2, old colors green: #9ddb64 and #30aa50
+
+  const color1 = new THREE.Color("#67E8F9");
+  const color2 = new THREE.Color("#22D3F8");
   const color3 = new THREE.Color("#ffffff");
 
 

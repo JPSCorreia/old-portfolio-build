@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const ProjectItem = (props) => {
   return (
-    <div className='relative flex items-center justify-center cursor-pointer h-auto w-full shadow-xl shadow-[#9ddb64] rounded-xl p-4 group hover:bg-gradient-to-r from-[#30aa50] to-[#9ddb64] '>
+    <div className='relative flex items-center justify-center cursor-pointer h-auto w-full shadow-xl shadow-[#67E8F9] rounded-xl p-4 group hover:bg-gradient-to-r from-[#0891B2] to-[#67E8F9] '>
     <Link href={`/${props.projectUrl}#${props.projectUrl}`} scroll={false}>
     {/* <div> */}
     <>

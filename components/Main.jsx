@@ -10,10 +10,10 @@ const Main = () => {
   return (
     <div id='home' className='w-[90%] m-auto md:h-screen text-center p-2 flex items-center'>
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex flex-col justify-center items-center'>
-      
+      <canvas className='flex flex-col justify-center' id='ball-place'></canvas>
           <div className='flex flex-col main'>
           <h1 className='animate__animated animate__fadeInLeft pb-2 text-gray-100 text-start text-3xl sm:text-4xl lg:text-6xl whitespace-nowrap'>
-            Hi, I'm <span className='text-[#9ddb64]'>João Correia</span><span className='text-gray-100'>,</span>
+            Hi, I'm <span className='text-[#67E8F9]'>João Correia</span><span className='text-gray-100'>,</span>
           </h1>
           <h1 className='animate__animated animate__fadeInLeft  pb-6 text-gray-100 text-start text-3xl sm:text-4xl lg:text-6xl whitespace-nowrap'>
             web developer.
@@ -39,16 +39,16 @@ const Main = () => {
             </div>
           </div>
           {/* <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
-            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-4 m-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
+            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] p-4 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
               <FaLinkedinIn size={30}/>
             </div>
-            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-4 m-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
+            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] p-4 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
               <FaGithub size={30}/>
             </div>
-            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-4 m-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
+            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] p-4 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
               <AiOutlineMail size={30}/>
             </div>
-            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#9ddb64] p-4 m-2 cursor-pointer hover:scale-110 hover:text-[#9ddb64] ease-in duration-100'>
+            <div className='rounded-full bg-[#121212] shadow-sm shadow-[#67E8F9] p-4 m-2 cursor-pointer hover:scale-110 hover:text-[#67E8F9] ease-in duration-100'>
               <BsFillPersonLinesFill size={30}/>
             </div>
           </div> */}

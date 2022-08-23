@@ -114,7 +114,7 @@ const Particle = () => {
       //         area: {
       //           gradient: {
       //             start: {
-      //               value: "#9ddb64"
+      //               value: "#67E8F9"
       //             },
       //             stop: {
       //               value: "#30aa50"
@@ -149,7 +149,7 @@ const Particle = () => {
       //         quantity: 5,
       //         particles: {
       //           color: {
-      //             value: "#9ddb64",
+      //             value: "#67E8F9",
       //             animation: {
       //               enable: true,
       //               speed: 400,
@@ -294,7 +294,7 @@ const Particle = () => {
       //       mode: "bounce"
       //     },
       //     color: {
-      //       value: "#9ddb64",
+      //       value: "#67E8F9",
       //       animation: {
       //         enable: false,
       //         speed: 50,
@@ -537,11 +537,11 @@ const Particle = () => {
           },
           "particles": {
             "color": {
-              "value": "#9ddb64",
+              "value": "#67E8F9",
             },
             "links": {
               "color": {
-                "value": "#9ddb64"
+                "value": "#67E8F9"
               },
               "distance": 150,
               "opacity": 0.4
@@ -644,7 +644,7 @@ export default Particle
 //         value: "#30aa50",
 //       },
 //       links: {
-//         color: "#9ddb64",
+//         color: "#67E8F9",
 //         distance: 150,
 //         enable: true,
 //         opacity: 0.75,

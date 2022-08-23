@@ -26,7 +26,7 @@
   }
 
   button {
-    @apply rounded-xl uppercase bg-gradient-to-r from-[#9ddb64] to-[#30aa50]
+    @apply rounded-xl uppercase bg-gradient-to-r from-[#67E8F9] to-[#0891B2]
   }
 
 }
@@ -106,18 +106,22 @@ html {
 }
 
 .sidebar {
-  padding-top: 1px;
-  padding-left: 8px;
+  /* padding-top: 1px; */
+  /* padding-left: 8px; */
 }
 
 .sidebar-border {
-  padding-top: 2px;
+  /* padding-top: 2px; */
+}
+
+.outline-close {
+  margin-right: 1.35rem;
 }
 
 .scroll-tracker {
   height: 1px;
   inset: 5rem 0 auto;
-  background-color: #9ddb64;
+  background-color: #67E8F9;
   position: fixed;
   transform-origin: left;
 }

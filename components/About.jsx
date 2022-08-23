@@ -8,7 +8,7 @@ const About = () => {
     <div id='about' className='w-[90%] m-auto md:h-screen p-2 flex items-center pt-32 mt-32'>
       <div className='max-w-[1240px] m-auto sm:grid grid-cols-3 gap-8'>
         <div className='col-span-2'>
-          <p className='uppercase text-xl tracking-widest text-[#9ddb64] animate__animated animate__fadeInLeft'>
+          <p className='uppercase text-xl tracking-widest text-[#67E8F9] animate__animated animate__fadeInLeft'>
             About
           </p>
           <h2 className='py-4 text-gray-200 animate__animated animate__fadeInLeft'>
@@ -22,7 +22,7 @@ const About = () => {
             <p className='py-2 cursor-pointer text-gray-200 underline'>Check out some of my projects </p>
           </Link>
         </div>
-        <div className='hidden sm:inline-block rounded-full shadow-lg shadow-[#9ddb64] m-auto hover:scale-110 ease-in duration-100 justify-center items-center'>
+        <div className='hidden sm:inline-block rounded-full shadow-lg shadow-[#67E8F9] m-auto hover:scale-110 ease-in duration-100 justify-center items-center'>
             <Image 
               className='animated-image'
               src="/assets/profile.png"
