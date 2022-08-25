@@ -16,7 +16,7 @@ function main() {
   const far = 1000;
   const camera = new THREE.PerspectiveCamera(fov, aspectRatio, near, far);
   camera.position.z = 75;
-  camera.position.y = 25;
+  camera.position.y = 40;
   const scene = new THREE.Scene();
 
   console.log(window.innerWidth/window.innerHeight)

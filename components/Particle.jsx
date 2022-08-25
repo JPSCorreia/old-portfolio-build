@@ -567,7 +567,7 @@ const Particle = () => {
               "density": {
                 "enable": true
               },
-              "value": 60
+              "value": 30
             },
             "opacity": {
               "random": {

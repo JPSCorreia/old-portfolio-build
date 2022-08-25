@@ -1,25 +1,38 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react'
+import React, {useEffect} from 'react'
 import {AiOutlineMail} from 'react-icons/ai'
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import {SiExpress, SiReact, SiPostgresql} from 'react-icons/si'
-
+import * as THREE from '../public/build/three.module.js';
+import { OrbitControls } from '../public/OrbitControls.js';
+import { FlakesTexture } from '../public/FlakesTexture.js';
+import RotatingBall from './RotatingBall.jsx'
 
 const Main = () => {
+
+
+  
+
   return (
     <div id='home' className='w-[90%] m-auto md:h-screen text-center p-2 flex items-center'>
+      
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex flex-col justify-center items-center'>
-      <canvas className='flex flex-col justify-center' id='ball-place'></canvas>
-          <div className='flex flex-col main'>
-          <h1 className='animate__animated animate__fadeInLeft pb-2 text-gray-100 text-start text-3xl sm:text-4xl lg:text-6xl whitespace-nowrap'>
+      {/* <canvas className='flex flex-col justify-center' id='ball-place' data-aos='fade-in' data-aos-mirror='false' data-aos-delay='200' data-aos-duration='2000'></canvas> */}
+        {/* <RotatingBall /> */}
+        <div className='flex flex-col main'>
+          <h1 
+            className='pb-2 text-gray-100 text-start text-3xl sm:text-4xl lg:text-6xl whitespace-nowrap' 
+            data-aos='fade-right' 
+            data-aos-anchor='#home'
+          >
             Hi, I'm <span className='text-[#67E8F9]'>João Correia</span><span className='text-gray-100'>,</span>
           </h1>
-          <h1 className='animate__animated animate__fadeInLeft  pb-6 text-gray-100 text-start text-3xl sm:text-4xl lg:text-6xl whitespace-nowrap'>
+          <h1 className='pb-6 text-gray-100 text-start text-3xl sm:text-4xl lg:text-6xl whitespace-nowrap' data-aos='fade-right' data-aos-anchor='#home'>
             web developer.
           </h1>
-          <div className='flex flex-col'>
-            <div className='py-2 text-start text-gray-200 flex flex-col md:flex-row animate__animated animate__fadeInUp'>
+          <div className='flex flex-col' data-aos='fade-up' data-aos-anchor='#home'>
+            <div className='py-2 text-start text-gray-200 flex flex-col md:flex-row'>
               <span className='flex items-center mr-2 whitespace-nowrap leading-loose tracking-widest text-lg'>Full Stack Developer<span className='hidden md:inline ml-3'>-</span>
               </span>
               <span className='flex items-center mr-3 leading-loose tracking-widest text-lg'>
