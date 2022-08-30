@@ -2,9 +2,8 @@
 import React, {useState, useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
-import {FaGithub, FaLinkedinIn, FaHome, FaUser, FaUserCircle, FaGraduationCap, FaEye} from 'react-icons/fa'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import {FaHome, FaUserCircle, FaGraduationCap, FaEye} from 'react-icons/fa'
 import {GrMail} from 'react-icons/gr'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -14,11 +13,12 @@ function Navbar() {
 
   useEffect(() => {
     Aos.init({
-      duration: 500,
-      debounceDelay: 50, 
+      duration: 400,
+      // debounceDelay: 50, 
       // once: false,
       easing: 'ease-in',
       mirror: true,
+      // offset: 100
     });
   }, [])
 
@@ -45,7 +45,7 @@ function Navbar() {
 
   // 
   return (
-    <div className={shadow? 'fixed w-full h-20 bg-[#121212]/70 shadow-[#121212] z-[9999]' : 'bg-[#121212]/70 shadow-[#121212] fixed w-full h-20 z-[100]'}>
+    <div className={shadow? 'fixed w-full h-20 bg-[#121212]/70 shadow-[#121212] z-[9999]' : 'bg-[#121212]/70 shadow-[#121212] fixed w-full h-20 z-[9999]'}>
       {/* <canvas className='flex flex-col justify-center' id='ball-place-2'></canvas> */}
       {/* <div className='scroll-tracker shadow-lg shadow-[#67E8F9]'></div> */}
       <div className="flex justify-between items-center w-full h-full px-2 ml-3">

@@ -46,7 +46,9 @@ html {
   z-index: 5; 
 } 
 
-
+html {
+  overflow-x: hidden;
+}
 
 
 .mainbody {
@@ -65,16 +67,13 @@ html {
   /* border: 1px solid red; */
 }
 
-/* .ball {
 
-} */
-
-#ball-place {
+canvas {
   /* position: absolute;
   left: 0;
   margin: auto; */
   /* bottom: 262rem; */
-  top: -10rem;
+  /* top: -10rem; */
   /* padding: 5px; */
   z-index:999;
   /* cursor:grab; */
@@ -84,7 +83,7 @@ html {
   /* left: 0; */
   /* margin: auto; */
   background-color: transparent;
-  position: absolute;
+  /* position: relative; */
 }
 
 #ball-place-2 {
@@ -105,14 +104,6 @@ html {
   position: fixed;
 }
 
-.sidebar {
-  /* padding-top: 1px; */
-  /* padding-left: 8px; */
-}
-
-.sidebar-border {
-  /* padding-top: 2px; */
-}
 
 .outline-close {
   margin-right: 1.35rem;
@@ -127,25 +118,37 @@ html {
 }
 
 .main {
-  padding-top: 50rem;
+  /* margin-top: 5rem; */
+  margin-bottom: 5rem;
+}
+
+canvas {
+  margin-top: 1rem;
+  justify-content: center;
+  display: flex;
+  z-index:9999;
 }
 
 @media only screen and (max-width: 500px) {
   .main {
-    padding-top: 30rem;
+    padding-top: 1rem;
   }
 }
 
 @media only screen and (max-width: 1200px) and (max-height: 820px) {
   .main {
-    padding-top: 30rem;
+    padding-top: 1rem;
+  }
+  
+  #home {
+    padding-top: 15rem;
   }
   #ball-place {
     /* position: absolute;
     left: 0;
     margin: auto; */
     /* bottom: 262rem; */
-    top: -5rem;
+    top: 15rem;
       /* padding: 5px; */
       z-index:9999;
       /* cursor:grab; */
@@ -154,7 +157,8 @@ html {
       display: block;
       /* left: 0; */
       /* margin: auto; */
+      /* margin-top: 1rem; */
       background-color: transparent;
-      position: absolute;
+      /* position: absolute; */
   }
 }
